@@ -1,0 +1,41 @@
+[auth/recovery] session exchange failed { code: undefined, message: 'Missing recovery token' }
+Error [AuthApiError]: Invalid Refresh Token: Refresh Token Not Found
+    at b3 (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:27:41920)
+    at async b5 (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:27:42864)
+    at async b4 (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:27:42304)
+    at async c (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:40:23254)
+    at async (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:40:23517) {
+  __isAuthError: true,
+  status: 400,
+  code: 'refresh_token_not_found'
+}
+Error [AuthApiError]: Invalid Refresh Token: Refresh Token Not Found
+    at b3 (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:27:41920)
+    at async b5 (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:27:42864)
+    at async b4 (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:27:42304)
+    at async c (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:40:23254)
+    at async (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:40:23517) {
+  __isAuthError: true,
+  status: 400,
+  code: 'refresh_token_not_found'
+}
+Error [AuthApiError]: Invalid Refresh Token: Refresh Token Not Found
+    at b3 (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:27:41920)
+    at async b5 (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:27:42864)
+    at async b4 (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:27:42304)
+    at async c (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:40:23254)
+    at async (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:40:23517) {
+  __isAuthError: true,
+  status: 400,
+  code: 'refresh_token_not_found'
+}
+Error [AuthApiError]: Invalid Refresh Token: Refresh Token Not Found
+    at b3 (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:27:41920)
+    at async b5 (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:27:42864)
+    at async b4 (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:27:42304)
+    at async c (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:40:23254)
+    at async (C:\Users\User\Documents\New project\joblinker\.next\server\chunks\ssr\_02gt6hc._.js:40:23517) {
+  __isAuthError: true,
+  status: 400,
+  code: 'refresh_token_not_found'
+}
