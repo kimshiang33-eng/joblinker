@@ -2,6 +2,16 @@ export type Locale = "en" | "ms";
 export type JobCategory = "factory" | "warehouse" | "retail" | "driver" | "food-service";
 export type LocalizedText = Record<Locale, string>;
 
+export function formatPostedTime(postedHours: number, locale: Locale) {
+  if (postedHours < 24) {
+    return locale === "ms" ? `${postedHours} jam lalu` : `${postedHours}h ago`;
+  }
+
+  const days = Math.floor(postedHours / 24);
+  if (locale === "ms") return `${days} hari lalu`;
+  return `${days} day${days === 1 ? "" : "s"} ago`;
+}
+
 export type Job = {
   id: string;
   referenceCode?: string;

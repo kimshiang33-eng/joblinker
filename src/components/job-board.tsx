@@ -12,7 +12,7 @@ import {
   MapPinIcon,
   WhatsappLogoIcon,
 } from "@phosphor-icons/react";
-import type { Job, JobCategory, Locale } from "@/data/jobs";
+import { formatPostedTime, type Job, type JobCategory, type Locale } from "@/data/jobs";
 
 type SortOrder = "newest" | "salary-high" | "salary-low";
 
@@ -92,6 +92,7 @@ export function JobBoard({ initialJobs }: { initialJobs: Job[] }) {
           && (!normalizedQuery || searchable.includes(normalizedQuery));
       })
       .sort((a, b) => {
+        if (a.featured !== b.featured) return a.featured ? -1 : 1;
         if (sortOrder === "salary-high") return b.salaryMin - a.salaryMin;
         if (sortOrder === "salary-low") return a.salaryMin - b.salaryMin;
         return a.postedHours - b.postedHours;
@@ -204,7 +205,7 @@ export function JobBoard({ initialJobs }: { initialJobs: Job[] }) {
                 <div className="job-body">
                   <div className="job-title-line">
                     <h2><Link href={`/jobs/${job.referenceCode ?? job.id}`}>{job.title[locale]}</Link></h2>
-                    <time>{job.postedHours}h ago</time>
+                    <time>{formatPostedTime(job.postedHours, locale)}</time>
                   </div>
                   <p className="company-name">{job.company}</p>
                   <div className="job-detail"><MapPinIcon size={17} />{job.location}</div>

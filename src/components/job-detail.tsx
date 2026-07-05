@@ -14,7 +14,7 @@ import {
   UsersIcon,
   WhatsappLogoIcon,
 } from "@phosphor-icons/react";
-import type { Job, Locale } from "@/data/jobs";
+import { formatPostedTime, type Job, type Locale } from "@/data/jobs";
 import { createClient } from "@/lib/supabase/client";
 
 const copy = {
@@ -25,7 +25,6 @@ const copy = {
     urgent: "Urgent",
     verified: "Verified employer",
     posted: "Posted",
-    ago: "hours ago",
     openings: "openings",
     about: "About this job",
     responsibilities: "What you will do",
@@ -46,7 +45,6 @@ const copy = {
     urgent: "Segera",
     verified: "Majikan disahkan",
     posted: "Disiarkan",
-    ago: "jam lalu",
     openings: "kekosongan",
     about: "Mengenai kerja ini",
     responsibilities: "Tugas anda",
@@ -163,7 +161,7 @@ export function JobDetail({ job, relatedJobs }: { job: Job; relatedJobs: Job[] }
                 <span><ClockIcon size={18} />{job.schedule[locale]}</span>
                 <span><UsersIcon size={18} />{job.vacancies} {t.openings}</span>
               </div>
-              <p className="job-detail-posted">{t.posted} {job.postedHours} {t.ago} · {t.ref}: {jobReference}</p>
+              <p className="job-detail-posted">{t.posted} {formatPostedTime(job.postedHours, locale)} · {t.ref}: {jobReference}</p>
             </section>
 
             <section className="job-detail-section">
