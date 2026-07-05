@@ -152,10 +152,10 @@ export function EmployerAuth({ initialLocale = "en", passwordResetSuccess = fals
         setError(t.requiredError);
         return;
       }
-      if (data.get("terms") !== "on") {
-        setError(t.termsError);
-        return;
-      }
+    }
+    if (mode !== "login" && data.get("terms") !== "on") {
+      setError(t.termsError);
+      return;
     }
 
     setError("");
